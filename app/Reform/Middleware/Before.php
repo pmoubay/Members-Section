@@ -40,7 +40,25 @@ class Before extends Middleware
       $data = $this->app->getCookie($this->app->config->get('auth.remember'));
       $credential = explode('___',$data);
 
+      if(empty(trim($data)) || count($credential) !== 2){
+        $this->app->response->redirect($this->app->urlFor('home'));
+      } else {
+        $identifier = $credential[0];
+        $token = $this->app->hash->hash($credential[1]);
 
+        $user = $this->app->user->
+          where('remember_identifier', $identifier)
+          ->first();
+
+        if($user){
+            if($this->app->hash->hashCheck($token, $user->remember_token)){
+              $_SESSION[$this->app->config->get('auth.session')] = $user->id;
+              $this->app->auth = $this->app->user->where('id', $user->id )->first();
+            } else {
+              $user->removeRememberCred();
+            }
+        }
+      }
 
     }
   }
