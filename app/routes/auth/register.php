@@ -42,7 +42,7 @@ $app->post('/register',$guest(), function() use ($app){
     });
 
     $app->flash('global', 'You have been registered.');
-    return $app->response->redirect($app->urlFor('home'));
+    $app->response->redirect($app->urlFor('home'));
 
   }
 

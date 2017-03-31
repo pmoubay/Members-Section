@@ -54,11 +54,11 @@ $app->post('/login', $guest(), function() use ($app){
         }
 
         $app->flash('global','You are signed in!');
-        return $app->response->redirect($app->urlFor('home'));
+        $app->response->redirect($app->urlFor('home'));
 
       } else {
         $app->flash('global','Could not log you in!');
-        return $app->response->redirect($app->urlFor('login'));
+        $app->response->redirect($app->urlFor('login'));
 
       }
 

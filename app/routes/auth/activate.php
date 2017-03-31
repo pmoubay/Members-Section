@@ -17,11 +17,11 @@ $app->get('/activate',$guest(), function() use ($app) {
 
   if(!$user || !$app->hash->hashCheck($user->active_hash,$test)){
     $app->flash('global','Error activating account.');
-    return $app->response->redirect($app->urlFor('home'));
+    $app->response->redirect($app->urlFor('home'));
   } else {
     $user->activateAccount();
     $app->flash('global','Account has been activated. You can now sign it.');
-    return $app->response->redirect($app->urlFor('home'));
+    $app->response->redirect($app->urlFor('home'));
   }
 
 })->name('activate');

@@ -1,5 +1,5 @@
 <?php
-  $app->get('/u/:username', $authenticated(), function($username) use ($app){
+  $app->get('/u/:username', function($username) use ($app){
     $user = $app->user->where('username', $username)->first();
 
     if(!$user){
