@@ -54,6 +54,10 @@ class User extends Eloquent
       $this->updateRememberCred(null, null);
     }
 
+    public function stat()
+    {
+        return $this->hasMany('Reform\User\Userstat', 'id');
+    }
 
 }
  ?>
