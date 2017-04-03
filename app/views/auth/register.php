@@ -1,7 +1,10 @@
-{% extends 'templates/default.php' %}
+{% extends 'templates/default2.php' %}
 
  {% block title %}Register{% endblock %}
   {% block content %}
+<section class="formsection" id="registerform">
+<div class="formcanvas">
+
 
   <div class="jumbotron">
       <div class="container">
@@ -79,5 +82,7 @@
 
     </form>
   </div>
+</div>
+</section>
 
   {% endblock %}

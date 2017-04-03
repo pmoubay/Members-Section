@@ -1,8 +1,11 @@
-{% extends 'templates/default.php' %}
+{% extends 'templates/default2.php' %}
 
  {% block title %}Login{% endblock %}
   {% block content %}
-  <div class="container">
+  <section class="formsection" id="loginform">
+
+
+  <div class="formcanvas">
     <form action="{{ urlFor('login.post')}}" method="post" autocomplete="off" class="form-signin">
         <h2 class="form-signin-heading">Welcome to Reform</h2>
           <h3 class="form-signin-heading">Please sign in</h3>
@@ -28,4 +31,5 @@
         <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
     </form>
   </div>
+  </section>
   {% endblock %}
