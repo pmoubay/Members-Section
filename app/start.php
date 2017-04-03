@@ -8,6 +8,9 @@ use Noodlehaus\Config;
 use RandomLib\Factory as Randomlib;
 
 use Reform\User\User;
+
+use Reform\User\UserStat;
+
 use Reform\Mail\Mailer;
 use Reform\Helpers\Hash;
 use Reform\Validation\Validator;
@@ -89,5 +92,9 @@ $view->parserOptions = [
 $view->parserExtensions = [
   new TwigExtension //generate urls
 ];
+
+$app->container->set('stat', function(){
+  return new UserStat;
+});
 
  ?>

@@ -4,12 +4,19 @@ namespace Reform\Validation;
 
 use Violin\Violin;
 use Reform\User\User;
+use Reform\Helpers\Hash;
 
 class Validator extends Violin
 {
-    public function __construct(User $user)
+    protected $user;
+    protected $auth;
+
+    public function __construct(User $user, $auth = null)
     {
       $this->user = $user;
+      $this->auth = $auth;
+
+
       $this->addFieldMessages([
         'email'=>[
           'uniqueEmail' => 'email already in use'
@@ -22,7 +29,13 @@ class Validator extends Violin
 
     public function validate_uniqueEmail($value,$input, $args)
     {
-        $user = $this->user->where('email',$value);
+        $user = $this->user->where('email', $value);
+
+        if($this->auth && $this->auth->email === $value){
+          return true;
+        }
+
+
         return ! (bool) $user->count();
     }
 

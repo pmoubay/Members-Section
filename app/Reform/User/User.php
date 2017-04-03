@@ -8,8 +8,11 @@ class User extends Eloquent
 {
     protected $table = 'tblusers';
     protected $fillable = [
+
       'email',
       'username',
+      'fname',
+      'lname',
       'password',
       'active',
       'active_hash',
@@ -30,6 +33,7 @@ class User extends Eloquent
 
     public function getNameOrUser()
     {
+
       return $this->getFullName() ?: $this->username;
     }
 
@@ -57,6 +61,11 @@ class User extends Eloquent
     public function stat()
     {
         return $this->hasMany('Reform\User\Userstat', 'id');
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 
 }

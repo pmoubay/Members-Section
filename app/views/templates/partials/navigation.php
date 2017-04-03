@@ -7,8 +7,7 @@
   {% if auth %}
         <li><a href="{{ urlFor('user.profile', {"username": auth.username}) }}">MyProfile</a></li>
         <ul>
-          <li><a href="{{ urlFor('account.stat', {"username": auth.username}) }}">test</a></li>
-          <li><a href="{{ urlFor('account.profile') }}">Update Profile</a></li>
+            <li><a href="{{ urlFor('account.profile') }}">Update Profile</a></li>
         </ul>
 
         <li><a href="{{ urlFor('logout') }}">Log out</a></li>
