@@ -1,6 +1,6 @@
 <header>
 
-    <a href="index.html" class="logo"><h1><img src="http://reformstudios.net/wp-content/uploads/2016/11/reform-YOGA-FITNESS-logo-design-copy-1.jpg" height="40em" alt="Reform"></h1></a>
+    <a href="{{ urlFor('home') }}" class="logo"><h1><img src="http://reformstudios.net/wp-content/uploads/2016/11/reform-YOGA-FITNESS-logo-design-copy-1.jpg" height="40em" alt="Reform"></h1></a>
 
     <!-- Social Media Banner -->
     <div class="social">
@@ -17,40 +17,40 @@
         <nav class="navbar">
             <ul class="mainmenu">
                 <li>
-                    <a href="aboutus.html" class="aboutusmenubutton">About Us</a>
+                    <a href="{{ urlFor('aboutus') }}" class="aboutusmenubutton">About Us</a>
                     <div class="submenu" id="aboutusmenu">
                         <ul>
-                            <li><a href="aboutus.html#ourStory">Our Story</a></li>
-                            <li><a href="aboutus.html#ourPhilosophy">Our Philosophy</a></li>
-                            <li><a href="aboutus.html#ourTeam">Our Coaches</a></li>
+                            <li><a href="{{ urlFor('aboutus') }}#ourStory">Our Story</a></li>
+                            <li><a href="{{ urlFor('aboutus') }}#ourPhilosophy">Our Philosophy</a></li>
+                            <li><a href="{{ urlFor('aboutus') }}#ourTeam">Our Coaches</a></li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <a href="services.html" class="servicesmenubutton">Services</a>
+                    <a href="{{ urlFor('services') }}" class="servicesmenubutton">Services</a>
                     <div class="submenu" id="servicesmenu">
                         <ul>
-                            <li><a href="services.html#fitness">Fitness</a></li>
-                            <li><a href="services.html#nutrition">Nutrition</a></li>
-                            <li><a href="services.html#lifecoaching">Life Coaching</a></li>
-                            <li><a href="services.html#physicaltherapy">Physical Therapy</a></li>
+                            <li><a href="{{ urlFor('services') }}#fitness">Fitness</a></li>
+                            <li><a href="{{ urlFor('services') }}#nutrition">Nutrition</a></li>
+                            <li><a href="{{ urlFor('services') }}#lifecoaching">Life Coaching</a></li>
+                            <li><a href="{{ urlFor('services') }}#physicaltherapy">Physical Therapy</a></li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <a href="programs.html" class="programsmenubutton">Programs</a>
+                    <a href="{{ urlFor('programs') }}" class="programsmenubutton">Programs</a>
                     <div class="submenu" id="programsmenu">
                         <ul>
-                            <li><a href="programs.html#firstprogram">Program 1</a></li>
-                            <li><a href="programs.html#secondprogram">Program 2</a></li>
-                            <li><a href="programs.html#thirdprogram">Program 3</a></li>
-                            <li><a href="programs.html#fourthprogram">Program 4</a></li>
+                            <li><a href="{{ urlFor('programs') }}#firstprogram">Program 1</a></li>
+                            <li><a href="{{ urlFor('programs') }}#secondprogram">Program 2</a></li>
+                            <li><a href="{{ urlFor('programs') }}#thirdprogram">Program 3</a></li>
+                            <li><a href="{{ urlFor('programs') }}#fourthprogram">Program 4</a></li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="signup.php">Sign up</a></li>
+                <li><a href="{{ urlFor('contactus') }}">Contact Us</a></li>
+                <li><a href="{{ urlFor('login') }}">Log In</a></li>
+                <li><a href="{{ urlFor('register') }}">Sign up</a></li>
             </ul>
         </nav>
     </div>
