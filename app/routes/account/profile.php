@@ -9,7 +9,7 @@ $app->post('/account/profile',$authenticated(), function() use ($app){
   $fname = $request->post('fname');
   $lname = $request->post('lname');
 
-  var_dump($email);
+  var_dump($request);
   die();
   $v = $app->validation;
   $v->validate ([

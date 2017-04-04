@@ -33,17 +33,18 @@ $app->post('/contactus',$guest(), function() use ($app){
 
     ]);
 
-    $app->mail->send('email/auth/usermessage.php', ['username' => $username, 'message' => $message], function($message) use ($user){
+
+      $app->mail->send('email/auth/usermessage.php',['username' => $username, 'message' => $message], function($message) use ($app) {
       $message->to('reformottawa@gmail.com');
-      $message->subject('Message was sent');
+      $message->subject('New Contact Us entry');
     });
 
-    $app->mail->send('email/auth/feedback.php', function($message) use ($user){
-      $message->to($email);
+    $app->mail->send('email/auth/feedback.php',['username' => $username, 'message' => $message, 'email' => $email] ,function($message) use ($app){
+      $message->to($app->contact->email);
       $message->subject('Thank you for your feedback!');
     });
 
-    $app->flash('global', 'You have sent us your feed.');
+    $app->flash('global', 'Thank you for sending us your feedback.');
     return $app->response->redirect($app->urlFor('home'));
 
   }

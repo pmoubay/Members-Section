@@ -54,10 +54,7 @@ $app->container->set('user', function(){
   return new User;
 });
 
-/******** MESSAGE ************/
-$app->container->set('contact', function(){
-  return new Contact;
-});
+
 
 $app->container->singleton('hash', function() use ($app){
   return new Hash($app->config);
@@ -102,6 +99,11 @@ $view->parserExtensions = [
 
 $app->container->set('stat', function(){
   return new UserStat;
+});
+
+/******** MESSAGE ************/
+$app->container->set('contact', function(){
+  return new Contact;
 });
 
  ?>

@@ -1,14 +1,11 @@
 <?php
-namespace Contact\Contact;
+namespace Reform\Contact;
 
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 class Contact extends Eloquent
 {
-  protected $name;
-  protected $email;
-  protected $message;
 
   protected $table = 'tblcontact';
   protected $fillable = [
@@ -17,9 +14,6 @@ class Contact extends Eloquent
       'message'
   ];
 
-  public __construct(){
-
-  }
 
 
 }

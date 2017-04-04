@@ -1,6 +1,6 @@
- {% extends 'templates/default.php' %}
+{% extends 'templates/default2.php' %}
 
-  {% block title %}Home{% endblock %}
-   {% block content %}
-
-   {% endblock %}
+ {% block title %}Home{% endblock %}
+  {% block content %}
+  <p>Main Page</p>
+  {% endblock %}
