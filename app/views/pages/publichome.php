@@ -12,7 +12,7 @@
                    <h1>Move Ahead</h1>
                    <h2>The health services everyone needs</h2>
                    <!-- Button -->
-                   <a href="services.html" class="bannerbutton">Learn More</a>
+                   <a href="{{ urlFor('services') }}" class="bannerbutton">Learn More</a>
                </div>
            </div>
        </section>
@@ -24,7 +24,7 @@
                <h4>Reform is key</br></h4>
                <p>Scientific method to Mind Body and Soul.<br/> We are free-spirited and independent. We are infinite. We are you.<br/> We are your sidekick, your family, your colleague, your neighbour and your new bestfriend. <br/> We are a community of
                    yogis dedicated to living, breathing and thriving in the modern world.</p>
-               <a id="" href="services.html" class="bannerbutton">LEARN MORE</a>
+               <a id="" href="{{ urlFor('services') }}" class="bannerbutton">LEARN MORE</a>
            </div>
        </section>
 
@@ -36,14 +36,14 @@
                    <h2>Fitness</h2>
                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                    <!-- Button -->
-                   <a href="services.html#fitness" class="btn-default">Learn More</a>
+                   <a href="{{ urlFor('services') }}#fitness" class="btn-default">Learn More</a>
                </figure>
 
                <figure id="nutrition">
                    <h2>Nutrition</h2>
                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                    <!-- Button -->
-                   <a href="services.html#nutrition" class="btn-default">Learn More</a>
+                   <a href="{{ urlFor('services') }}#nutrition" class="btn-default">Learn More</a>
                </figure>
 
            </div>
@@ -54,14 +54,14 @@
                    <h2>Life Coaching</h2>
                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                    <!-- Button -->
-                   <a href="services.html#lifecoaching" class="btn-default">Learn More</a>
+                   <a href="{{ urlFor('services') }}#lifecoaching" class="btn-default">Learn More</a>
                </figure>
 
                <figure id="physio">
                    <h2>Physical Therapy</h2>
                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                    <!-- Button -->
-                   <a href="services.html#physicaltherapy" class="btn-default">Learn More</a>
+                   <a href="{{ urlFor('services') }}#physicaltherapy" class="btn-default">Learn More</a>
                </figure>
 
            </div>
@@ -81,7 +81,7 @@
              <h1>Move Ahead</h4>
              <h2>The health services everyone needs</h5>
              <!-- Button -->
-             <a href="programs.html" class="bannerbutton">Learn More</a>
+             <a href="{{ urlFor('programs') }}" class="bannerbutton">Learn More</a>
            </div>
        </section>
 

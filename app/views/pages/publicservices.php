@@ -28,7 +28,7 @@
           <h4>Reform is key</br></h4>
           <p>Scientific method to Mind Body and Soul.<br/> We are free-spirited and independent. We are infinite. We are you.<br/> We are your sidekick, your family, your colleague, your neighbour and your new bestfriend. <br/> We are a community of
               yogis dedicated to living, breathing and thriving in the modern world.</p>
-          <a href="contactus.html" class="bannerbutton">CONTACT US</a>
+          <a href="{{ urlFor('contactus') }}" class="bannerbutton">CONTACT US</a>
       </div>
   </section>
 
@@ -85,7 +85,7 @@
           <div class="thumbcaption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis elit augue, id dictum metus finibus in. Nullam eget nisi vel mi lobortis venenatis. Nullam condimentum dapibus diam, quis posuere nibh porttitor vel. Praesent ultrices eu lacus sed mollis. Donec tincidunt auctor mollis. Aliquam non nunc et lectus sagittis commodo.</p>
             <p>- Johnny Que</p>
-            <a href="contactus.html" class="btn-default">CONTACT US</a>
+            <a href="{{ urlFor('contactus') }}" class="btn-default">CONTACT US</a>
           </div>
         </div>
         <div class="thumbnail" id="TestSam">
@@ -93,7 +93,7 @@
           <div class="thumbcaption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis elit augue, id dictum metus finibus in. Nullam eget nisi vel mi lobortis venenatis. Nullam condimentum dapibus diam, quis posuere nibh porttitor vel. Praesent ultrices eu lacus sed mollis. Donec tincidunt auctor mollis. Aliquam non nunc et lectus sagittis commodo.</p>
             <p>- Samantha Dennis</p>
-            <a href="contactus.html" class="btn-default">CONTACT US</a>
+            <a href="{{ urlFor('contactus') }}" class="btn-default">CONTACT US</a>
           </div>
         </div>
         <div class="thumbnail" id="TestSammy">
@@ -101,7 +101,7 @@
           <div class="thumbcaption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis elit augue, id dictum metus finibus in. Nullam eget nisi vel mi lobortis venenatis. Nullam condimentum dapibus diam, quis posuere nibh porttitor vel. Praesent ultrices eu lacus sed mollis. Donec tincidunt auctor mollis. Aliquam non nunc et lectus sagittis commodo.</p>
             <p>- Sammy True</p>
-            <a href="contactus.html" class="btn-default">CONTACT US</a>
+            <a href="{{ urlFor('contactus') }}" class="btn-default">CONTACT US</a>
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@
             <p>Scientific method to Mind Body and Soul.<br/> We are free-spirited and independent. We are infinite. We are you.<br/> We are your sidekick, your family, your colleague, your neighbour and your new bestfriend. <br/> We are a community of
                 yogis dedicated to living, breathing and thriving in the modern world.</p>
                 <h4>Calm minds bring inner strength and self-confidence, that's very important for good health.</h4>
-            <a href="programs.html" class="bannerbutton">FIND YOUR PROGRAM</a>
+            <a href="{{ urlFor('programs') }}" class="bannerbutton">FIND YOUR PROGRAM</a>
         </div>
     </section>
 

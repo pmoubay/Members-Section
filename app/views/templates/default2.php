@@ -22,12 +22,12 @@
       <h3><img src="http://reformstudios.net/wp-content/uploads/2016/11/reform-YOGA-FITNESS-logo-design-copy-1.jpg" height="60em" alt="Reform"></h3>
 
       <p class="footer-links">
-        <a href="index.html">Home</a> ·
-        <a href="services.html">Services</a> ·
-        <a href="programs.html">Programs</a><br/>
-        <a href="aboutus.html">About</a> ·
+        <a href="{{ urlFor('home') }}">Home</a> ·
+        <a href="{{ urlFor('services') }}">Services</a> ·
+        <a href="{{ urlFor('programs') }}">Programs</a><br/>
+        <a href="{{ urlFor('aboutus') }}">About</a> ·
         <a href="#">FAQ</a> ·
-        <a href="contactus.html">Contact</a>
+        <a href="{{ urlFor('contactus') }}">Contact</a>
       </p>
 
       <p class="footer-company-name">Reform Studio and Fitness &copy; 2017</p>

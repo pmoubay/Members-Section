@@ -92,7 +92,7 @@
                 <h1>Move Ahead</h1>
                 <h2>The health services everyone needs</h2>
                 <!-- Button -->
-                <a href="services.html" class="bannerbutton">Learn More</a>
+                <a href="{{ urlFor('services') }}" class="bannerbutton">Learn More</a>
               </div>
             </div>
           </section>
