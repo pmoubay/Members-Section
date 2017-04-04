@@ -11,5 +11,7 @@ require INC_ROOT . '/app/routes/error/404.php';
 require INC_ROOT . '/app/routes/account/profile.php';
 require INC_ROOT . '/app/routes/account/stat.php';
 
+require INC_ROOT . '/app/routes/auth/contactus.php';
+
 
 ?>

@@ -17,6 +17,8 @@ use Reform\Validation\Validator;
 use Reform\Middleware\Before;
 use Reform\Middleware\CSRF;
 
+use Reform\Contact\Contact;
+
 
 session_cache_limiter(false);
 session_start();
@@ -50,6 +52,11 @@ $app->auth = false;
 
 $app->container->set('user', function(){
   return new User;
+});
+
+/******** MESSAGE ************/
+$app->container->set('contact', function(){
+  return new Contact;
 });
 
 $app->container->singleton('hash', function() use ($app){
