@@ -49,11 +49,10 @@
 
   <section class="description" id="generic">
       <div>
-          <h3>Personalizing Fitness with a Hollistic Touch</h3>
+          <h3>A New Fitness in Ottawa</h3>
           <h3>`````````````````````````````````````````````</h3>
-          <p>Scientific method to Mind Body and Soul.<br/> We are free-spirited and independent. We are infinite. We are you.<br/> We are your sidekick, your family, your colleague, your neighbour and your new bestfriend. <br/> We are a community of
-              yogis dedicated to living, breathing and thriving in the modern world.</p>
-              <h4>Calm minds bring inner strength and self-confidence, that's very important for good health.</h4>
+          <p>Scientific method for advanced training.</p>
+              <h4>An advanced website for an advanced service</h4>
       </div>
   </section>
 
@@ -75,7 +74,7 @@
           <p>What we used in Front End</p>
           <ul>
             <li>HTML5, CSS3, JS</li>
-            <li>From a blank sheet</li>
+            <li>No Librairies, No Bootstrap, No Angular</li>
           </ul>
         </div>
       </div>
@@ -84,10 +83,13 @@
         <div class="thumbcaption">
           <p>What we used on the Back End</p>
           <ul>
-            <li>PHP</li>
-            <li>Twig</li>
-            <li>Frameworks</li>
-            <li>Libraries</li>
+            <li>PHP/PHPmailer</li>
+            <li>Twig and Symphony</li>
+            <li>Composer</li>
+            <li>Slim</li>
+            <li>Illuminate</li>
+            <li>Violin</li>
+            <li>RandomLib</li>
           </ul>
         </div>
       </div>
@@ -96,8 +98,9 @@
         <div class="thumbcaption">
           <p>Special Technologies we worked with:</p>
           <ul>
-            <li>Frameworks</li>
-            <li>Libraries</li>
+            <li>Google Maps API</li>
+            <li>Twitter API</li>
+            <li>hassankhan Configuration</li>
           </ul>
           <span><p>healthy, tasty food choices for you and your family and best of all, everything is fresh.</p><span>
         </div>
@@ -113,9 +116,10 @@
         <div class="thumbcaption">
           <p>Positives:</p>
           <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <li>Learning From Scratch</li>
+            <li>Better understanding of Front End and Backend</li>
+            <li>Dependency Injection</li>
+            <li>Tools for ease of use and security</li>
           </ul>
           <span><p>SimplyRaw Express is a gluten-free, plant-based and organic restaurant in Ottawa.</p></span>
         </div>
@@ -126,8 +130,12 @@
           <p>Negatives:</p>
           <ul>
             <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <li>Had to learn a lot of Syntax</li>
+            <li>A lot of trial and Error</li>
+            <li>Some stuff still ambiguous</li>
+            <li>A lot of Troubleshooting </li>
+            <li>PHP OOP</li>
+            <li>A lot of work for little visible outcome</li>
           </ul>
           <span><p>SimplyRaw Express is a gluten-free, plant-based and organic restaurant in Ottawa.</p></span>
         </div>
