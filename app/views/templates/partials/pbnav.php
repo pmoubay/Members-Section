@@ -1,4 +1,7 @@
 <header>
+  <div style="background-color:powderblue;">
+    {% include 'templates/partials/messages.php' %}
+  </div>
 
     <a href="{{ urlFor('home') }}" class="logo"><h1><img src="http://reformstudios.net/wp-content/uploads/2016/11/reform-YOGA-FITNESS-logo-design-copy-1.jpg" height="40em" alt="Reform"></h1></a>
 
@@ -16,6 +19,12 @@
     <div class="menu">
         <nav class="navbar">
             <ul class="mainmenu">
+              {% if auth %}
+              <li><a href="{{ urlFor('user.profile', {"username": auth.username}) }}">My Profile</a></li>
+              <li><a href="{{ urlFor('members') }}">Members</a></li>
+              <li><a href="{{ urlFor('account.profile') }}">Update Profile</a></li>
+              <li><a href="{{ urlFor('logout') }}">Logout</a></li>
+              {% else %}
                 <li>
                     <a href="{{ urlFor('aboutus') }}" class="aboutusmenubutton">About Us</a>
                     <div class="submenu" id="aboutusmenu">
@@ -54,5 +63,5 @@
             </ul>
         </nav>
     </div>
-
+{% endif %}
 </header>

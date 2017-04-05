@@ -1,6 +1,6 @@
 {% extends 'templates/default2.php' %}
 
- {% block title %}Home{% endblock %}
+ {% block title %}Reform | Contact Us{% endblock %}
   {% block content %}
   <!-- Main Banner (jumbotron) -->
   <section class="banner" id="getintouch">
@@ -49,27 +49,50 @@
     </div>
   </section>
 
-  <section class="formsection">
-    <div class="formcanvas">
-      <form id="ajax-feedback" method="post" action="Mail.php">
-        <h4>Write To Us</h4>
-        <p>We're waiting for you!</p>
-        <div class="field">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required />
+
+<section class="formsection">
+  <div class="formcanvas">
+    <h4>Write To Us</h4>
+    <p>We're waiting for you!</p>
+
+  <form action="{{ urlFor('publicContactUs.post')}}" method="post" autocomplete="off" class="form-signin">
+
+          <fieldset class="field">
+            <label for="username">Your Name</label>
+
+              <input type="text" name="username" class="form-control" id="username" {% if request.post('username') %}value={{request.post('username')}} {% endif %}>
+
+            {% if errors.first('username') %} {{ errors.first('username')}} {% endif %}
+
+          </fieldset>
+<br>
+      <fieldset class="field" >
+        <div>
+          <label for="email">Email</label>
+
+          <input type="email" name="email" class="form-control" id="email" {% if request.post('email') %}value={{request.post('email')}} {% endif %}>
+          {% if errors.first('email') %} {{ errors.first('email')}} {% endif %}
+          <br>
+
         </div>
-        <div class="field">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="field">
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <div class="field">
-          <button class="bannerbutton" type="submit">Send</button>
-        </div>
-      </form>
+      </fieldset>
+
+  <hr>
+  <fieldset class="field">
+  <label for="example-text-input">Message</label>
+  <div >
+      <textarea id="message" class="form-control" name="message"></textarea>
+        {% if errors.first('message') %} {{ errors.first('message')}} {% endif %}
+  </div>
+
+        <br>
+    <button type="submit"  class="bannerbutton">Send Message</button>
+    </div>
+
+    <!--this is CSRF security protection-->
+    <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
+
+  </form>
     </div>
   </section>
   {% endblock %}

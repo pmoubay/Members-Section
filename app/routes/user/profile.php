@@ -1,5 +1,5 @@
 <?php
-  $app->get('/u/:username', $authenticated(), function($username) use ($app){
+  $app->get('/u/:username', function($username) use ($app){
     $user = $app->user->where('username', $username)->first();
 
     if(!$user){
@@ -14,7 +14,7 @@
     $stat4 = $app->stat->where('id',$user->getId())->where('typeid','4')->get();
 
 
-    $test = 'this is a test';
+
 
     $app->render('user/profile.php',[
       'user' => $user,

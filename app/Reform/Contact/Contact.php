@@ -14,8 +14,6 @@ class Contact extends Eloquent
       'message'
   ];
 
-
-
 }
 
  ?>

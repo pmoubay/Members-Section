@@ -1,5 +1,5 @@
 <?php
-$app->get('/members', function() use ($app) {
+$app->get('/members', $authenticated, function() use ($app) {
   $app->render('members.php');
 })->name('members');
 
