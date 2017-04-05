@@ -49,7 +49,7 @@
 
   <section class="description" id="generic">
       <div>
-          <h3>A New Fitness in Ottawa</h3>
+          <h3>A New Fitness Destination in Ottawa</h3>
           <h3>`````````````````````````````````````````````</h3>
           <p>Scientific method for advanced training.</p>
               <h4>An advanced website for an advanced service</h4>
@@ -71,18 +71,21 @@
       <div class="thumbnail" id="FrontEnd">
         <div class="thumbimage"></div>
         <div class="thumbcaption">
-          <p>What we used in Front End</p>
-          <ul>
+          <p>What we used in Front End:</p>
+          <ul style="text-align: left;">
             <li>HTML5, CSS3, JS</li>
-            <li>No Librairies, No Bootstrap, No Angular</li>
+            <li>jQuery</li>
+            <li>No Librairies</li>
+            <li>No Bootstrap</li>
+            <li>No Angular</li>
           </ul>
         </div>
       </div>
       <div class="thumbnail" id="BackEnd">
         <div class="thumbimage"></div>
         <div class="thumbcaption">
-          <p>What we used on the Back End</p>
-          <ul>
+          <p>What we used on the Back End:</p>
+          <ul style="text-align: left;">
             <li>PHP/PHPmailer</li>
             <li>Twig and Symphony</li>
             <li>Composer</li>
@@ -97,7 +100,7 @@
         <div class="thumbimage"></div>
         <div class="thumbcaption">
           <p>Special Technologies we worked with:</p>
-          <ul>
+          <ul style="text-align: left;">
             <li>Google Maps API</li>
             <li>Twitter API</li>
             <li>hassankhan Configuration</li>
@@ -115,11 +118,11 @@
         <div class="thumbimage"></div>
         <div class="thumbcaption">
           <p>Positives:</p>
-          <ul>
+          <ul style="text-align: left;">
             <li>Learning From Scratch</li>
-            <li>Better understanding of Front End and Backend</li>
+            <li>Front End and Backend</li>
             <li>Dependency Injection</li>
-            <li>Tools for ease of use and security</li>
+            <li>Tools</li>
           </ul>
           <span><p>SimplyRaw Express is a gluten-free, plant-based and organic restaurant in Ottawa.</p></span>
         </div>
@@ -128,14 +131,13 @@
         <div class="thumbimage"></div>
         <div class="thumbcaption">
           <p>Negatives:</p>
-          <ul>
-            <li>One</li>
-            <li>Had to learn a lot of Syntax</li>
-            <li>A lot of trial and Error</li>
-            <li>Some stuff still ambiguous</li>
-            <li>A lot of Troubleshooting </li>
+          <ul style="text-align: left;">
+            <li>Syntax</li>
+            <li>trial and Error</li>
+            <li>Ambiguity</li>
+            <li>Troubleshooting </li>
             <li>PHP OOP</li>
-            <li>A lot of work for little visible outcome</li>
+            <li>Time Requirements</li>
           </ul>
           <span><p>SimplyRaw Express is a gluten-free, plant-based and organic restaurant in Ottawa.</p></span>
         </div>
