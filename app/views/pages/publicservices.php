@@ -5,9 +5,11 @@
   <!-- Main Banner (jumbotron) -->
   <section class="banner" id="reformServices">
       <div>
+
           <div class="bannertext">
               <h1>Reform Services</h1>
               <h2>Wellness services for all aspects of your life</h2>
+
           </div>
       </div>
   </section>

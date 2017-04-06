@@ -57,16 +57,16 @@
 
   <form action="{{ urlFor('publicContactUs.post')}}" method="post" autocomplete="off" class="form-signin">
 
-          <fieldset class="field">
+          <div class="field">
             <label for="username">Your Name</label>
 
               <input type="text" name="username" class="form-control" id="username" {% if request.post('username') %}value={{request.post('username')}} {% endif %}>
 
             {% if errors.first('username') %} {{ errors.first('username')}} {% endif %}
 
-          </fieldset>
-<br>
-      <fieldset class="field" >
+          </div>
+
+      <div class="field" >
         <div>
           <label for="email">Email</label>
 
@@ -75,10 +75,10 @@
           <br>
 
         </div>
-      </fieldset>
+      </div>
 
-  <hr>
-  <fieldset class="field">
+
+  <div class="field">
   <label for="example-text-input">Message</label>
   <div >
       <textarea id="message" class="form-control" name="message"></textarea>
