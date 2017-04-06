@@ -11,7 +11,6 @@
         <ul>
             {% if auth %}
             <li><a href="{{ urlFor('user.profile', {"username": auth.username}) }}">My Profile</a></li>
-            <li><a href="{{ urlFor('account.profile') }}">Update Profile</a></li>
             <li><a href="{{ urlFor('logout') }}">Logout</a></li>
             {% else %}
               <li><a href="{{ urlFor('contactus') }}">Contactus</a></li>

@@ -2,8 +2,7 @@
 <html>
 
 <head>
-    <style>
-
+<style>
 /*-----------------------------------------------------------*/
 /* Default Buttons */
 
@@ -122,6 +121,16 @@ header .navbar a{
 border: 2px solid #000;
 padding: 0.5em;
 font-weight: bold;
+}
+
+.infosection li, .infosection a {
+  color: #000;
+  font-weight: 100;
+  display: inline-block;
+  font-size: 1em;
+  letter-spacing: 0.03em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 /*-----------------------------------------------------------*/
@@ -487,8 +496,7 @@ border: 1px solid rgba(185, 74, 72, 0.3);
    -moz-border-radius: 4px;
         border-radius: 4px;
 }
-
-    </style>
+</style>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:400,600">
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto:300,400,700'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -500,40 +508,144 @@ border: 1px solid rgba(185, 74, 72, 0.3);
 <body>
 
     <header>
-        <a href="profile.html" class="logo"><h1><img src="http://reformstudios.net/wp-content/uploads/2016/11/reform-YOGA-FITNESS-logo-design-copy-1.jpg" height="35em" alt="Reform"></h1></a>
+        <a href="{{urlFor('members')}}" class="logo"><h1><img src="http://reformstudios.net/wp-content/uploads/2016/11/reform-YOGA-FITNESS-logo-design-copy-1.jpg" height="35em" alt="Reform"></h1></a>
         <!-- Navigation Banner -->
         <div class="navbar">
             <ul>
-                <li><a href="profile.html">My Profile</a></li>
-                <li><a href="update.html">Update Profile</a></li>
-                <li><a href="logout.html">Logout</a></li>
+                <li><a href="{{ urlFor('user.profile', {"username": auth.username}) }}">My Profile</a></li>
+                <li><a href="{{ urlFor('logout') }}">Logout</a></li>
             </ul>
         </div>
     </header>
 
     <section class="profilebody">
-        <div class="welcomemessage">
-            <h3>Welcome, Pascal!</h3>
+        <div class="infosection">
+            <h2>Welcome, {{ user.username }}!<h6>Last login: {{ "now"|date("m/d/Y h:i:s") }}</h6></h2>
+
             <div class="personalinfo">
                 <h4>Personal Information</h4>
-                <p><b>Full Name: </b>Pascal Moubayed</p>
-                <p><b>Email: </b>pmoubay@gmail.com</p>
+                <p><b>Name: </b>{{ user.getFullName()}}</p>
+                <p><b>Email: </b>{{ user.email }}</p>
+                <p><b>Telephone: </b>{{ user.telephone }}</p>
+                <p><b>Member Since: </b>{{ user.created_at }}</p>
             </div>
+            <br><br>
+            <li><a href="{{ urlFor('account.profile') }}">Update Profile</a></li>
         </div>
+
+        <script type="text/javascript">
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer1", {
+		title:{
+			text: "Stats for Lagree Results "
+		},
+		data: [
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "line",
+			dataPoints: [
+				{% if stats is empty %}
+				<p>No stats available</p>
+				{% else %}
+				    {%  for stat in stats %}
+				      { label: "{{ stat.date }}",  y: {{ stat.stat }}  },
+				    {% endfor %}
+				{% endif %}
+
+			]
+		}
+		]
+	});
+	chart.render();
+  var chart2 = new CanvasJS.Chart("chartContainer2", {
+		title:{
+			text: "Stats for Physio Resistance "
+		},
+		data: [
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "bar",
+			dataPoints: [
+				{% if physios is empty %}
+				<p>No stats available</p>
+				{% else %}
+				    {%  for physio in physios %}
+				      { label: "{{ physio.date }}",  y: {{ physio.stat }}  },
+				    {% endfor %}
+				{% endif %}
+
+			]
+		}
+		]
+	});
+	chart2.render();
+  var chart3 = new CanvasJS.Chart("chartContainer3", {
+		title:{
+			text: "Stats for Cardio Time "
+		},
+		data: [
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "doughnut",
+			dataPoints: [
+				{% if cardios is empty %}
+				<p>No stats available</p>
+				{% else %}
+				    {%  for cardio in cardios %}
+				      { label: "{{ cardio.date }}",  y: {{ cardio.stat }}  },
+				    {% endfor %}
+				{% endif %}
+
+			]
+		}
+		]
+	});
+	chart3.render();
+  var chart4 = new CanvasJS.Chart("chartContainer4", {
+		title:{
+			text: "Stats for Strength Level "
+		},
+		data: [
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "line",
+			dataPoints: [
+				{% if strongs is empty %}
+				<p>No stats available</p>
+				{% else %}
+				    {%  for strong in strongs %}
+				      { label: "{{ strong.date }}",  y: {{ strong.stat }}  },
+				    {% endfor %}
+				{% endif %}
+
+			]
+		}
+		]
+	});
+	chart4.render();
+
+}
+</script>
+
 
         <div class="infosection">
             <h4>Here are your stats</h4>
             <div class="statssection">
                 <div class="row">
                     <div class="statitem" id="cardio">
+                      <div id="chartContainer1" style="height: 300px; width: 100%;"></div>
                     </div>
                     <div class="statitem" id="fitness">
+                      <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="statitem" id="strength">
+                      <div id="chartContainer3" style="height: 300px; width: 100%;"></div>
                     </div>
                     <div class="statitem" id="bodyweight">
+                      <div id="chartContainer4" style="height: 300px; width: 100%;"></div>
                     </div>
                 </div>
             </div>
@@ -542,10 +654,10 @@ border: 1px solid rgba(185, 74, 72, 0.3);
 
     <section class="sidebar">
         <div class="row" id="button">
-            <a href="contactus.html" class="bannerbutton">Book an Appointment</a>
+            <a href="{{urlFor('contactus')}}" class="bannerbutton">Book an Appointment</a>
         </div>
         <div class="row" id="button">
-            <a href="contactus.html" class="bannerbutton">Buy a Product</a>
+            <a href="{{urlFor('services')}}#nutrition" class="bannerbutton">Buy a Product</a>
         </div>
         <div class="row" style="height : 50em;"id="feed">
             <a class="twitter-timeline" href="https://twitter.com/hashtag/fitness" data-widget-id="849442077628870656">#fitness Tweets</a>
@@ -635,6 +747,9 @@ border: 1px solid rgba(185, 74, 72, 0.3);
         </div>
 
     </footer>
+
+
+    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 </body>
 

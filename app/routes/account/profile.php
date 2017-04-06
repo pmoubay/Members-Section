@@ -5,24 +5,24 @@ $app->get('/account/profile',$authenticated(), function() use ($app){
 
 $app->post('/account/profile',$authenticated(), function() use ($app){
   $request = $app->request;
-  $email = $request->post('email');
   $fname = $request->post('fname');
   $lname = $request->post('lname');
+  $phone = $request->post('phone');
 
-  var_dump($request);
-  die();
+
+
   $v = $app->validation;
   $v->validate ([
-    //'email' => [$email, 'required|email|uniqueEmail'],
-    'fname' => [$fname, 'alpha|max(30)'],
-    'lname' => [$lname, 'alpha|max(30)']
+    'fname' => [$lname, 'required|alpha|max(30)|min(2)'],
+    'lname' => [$lname, 'required|alpha|max(30)|min(2)'],
+    'phone' => [$phone, 'required|min(10)']
   ]);
 
   if ($v->passes()){
-    $app->user->update([
-        'email' => $email,
+    $app->auth->update([
         'fname' => $fname,
-        'lname' => $lname
+        'lname' => $lname,
+        'telephone' => $phone
         ]);
 
         $app->flash('global', 'Your details have been update :)');

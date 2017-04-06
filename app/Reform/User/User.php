@@ -13,6 +13,7 @@ class User extends Eloquent
       'username',
       'fname',
       'lname',
+      'telephone',
       'password',
       'active',
       'active_hash',

@@ -11,7 +11,9 @@ $app->post('/register',$guest(), function() use ($app){
   $username = $request->post('username');
   $password = $request->post('password');
   $confirmpass= $request->post('confirmpass');
-
+  $fname = $request->post('fname');
+  $lname = $request->post('lname');
+  $phone = $request->post('phone');
 
   $v = $app->validation;
   $v->validate([
@@ -19,6 +21,9 @@ $app->post('/register',$guest(), function() use ($app){
     'username' => [$username, 'required|alnumDash|max(20)|uniqueUsername'],
     'password' => [$password, 'required|min(6)'],
     'confirmpass' => [$confirmpass, 'required|matches(password)'],
+    'fname' => [$fname, 'required|alpha|max(30)|min(2)'],
+    'lname' => [$lname, 'required|alpha|max(30)|min(2)'],
+    'telephone' => [$phone, 'required|min(10)'],
   ]);
 
   if($v->passes()){
@@ -32,7 +37,10 @@ $app->post('/register',$guest(), function() use ($app){
       'username' => $username,
       'password' => $app->hash->password($password),
       'active' => false,
-      'active_hash' => $app->hash->hash($identifier)
+      'active_hash' => $app->hash->hash($identifier),
+      'fname' => $fname,
+      'lname' => $lname,
+      'telephone' => $phone
 
     ]);
 
