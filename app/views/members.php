@@ -4,11 +4,12 @@
    <section class="profilebody">
 
        <div class="infosection" style="text-align: center">
-          <img src="https://cache.net-a-porter.com/alfresco/nap/webAssets/webPageElements/product-listing/desktop/common/en/shared/global/images/whats-new/Slot4/promo.jpg?v=1.2" alt="whats new">
+          <img src="http://reformstudios.net/wp-content/uploads/2016/11/reform-YOGA-FITNESS-logo-design-copy-1.jpg" alt="reform">
 
        </div>
 
-       <div class="infosection">
+       <div class="infosection" style="text-align: center">
+           <img  src="https://cache.net-a-porter.com/alfresco/nap/webAssets/webPageElements/product-listing/desktop/common/en/shared/global/images/whats-new/Slot4/promo.jpg?v=1.2" alt="whats new">
          <h1>#News - Whats new at Reform</h1>
          <h3> - Keeping you informed - </h3>
          <h4>{{ "now"|date("m/d/Y") }}</h4>
